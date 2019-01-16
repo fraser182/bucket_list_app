@@ -29,7 +29,6 @@ Request.prototype.delete = function (id) {
     .then((response) => response.json());
 };
 
-// PUT method, picked up by the router
 Request.prototype.put = function (id, payload) {
   return fetch(`${this.url}/${id}`, {
     method: 'PUT',
