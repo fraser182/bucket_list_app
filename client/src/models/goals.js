@@ -14,15 +14,13 @@ Goals.prototype.bindEvents = function(){
     this.postGoal(evt.detail);
   });
 
-  PubSub.subscribe('', (evt) => {
+  // PubSub.subscribe('GoalView:goal-edit-clicked', (evt) => {
+  //   this.publishGoal(evt.detail);
+  // });
 
-  });
-
-  PubSub.subscribe('', (evt) => {
-
-  });
-
-
+  // PubSub.subscribe('GoalView:goal-updated', (evt) => {
+  //   this.updateGoal(evt.detail);
+  // });
 };
 
 
@@ -34,8 +32,6 @@ Goals.prototype.getData = function(){
   })
   .catch(console.error);
 };
-
-
 
 Goals.prototype.publishGoals = function(goals){
   PubSub.publish('Goals:data-loaded', goals);
